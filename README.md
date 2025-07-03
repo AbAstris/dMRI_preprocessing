@@ -2,6 +2,8 @@
 
 This repository contains python scripts to pre-process and fit models to diffusion MRI data, specifically constrained spherical deconvolution (CSD) and diffusion tensor imaging (DTI) models. Software requirements are [MRtrix3](https://www.mrtrix.org/) and [FSL](https://fsl.fmrib.ox.ac.uk/fsl/docs/#/). This script has primarily been tested using [Python 3.11](https://www.python.org/downloads/release/python-3110/).
 
+*NOTE: The current scripts are not written for BIDS specifically, though they are BIDS compatible with a little tweaking. I'm currently working to provide separate scripts that will use BIDS for easier compatibility between neuroimaging groups.*
+
 There are 3 main Python scripts (which should be run consecutively):
 
 1. **automate_proc1.py**: The first script is designed to read in a CSV file of information for multiple subjects. Using this file, the script will establish that the image data, originally in either MIF (.mif) or NIfTI (.nii.gz), is in the same format and in the correct location by creating a 'raw' folder under each subject directory. A brain mask will also be generated and checked at this point for future pre-processing steps.
